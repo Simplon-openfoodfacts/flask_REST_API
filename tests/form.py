@@ -6,21 +6,22 @@ import re
 
 # Valeurs nutritionnelles maximales
 nutritional_values_max = {
-    'energy-kcal_100g': [600, "kcal/100g"],
-    'fat_100g': [20, "g/100g"],
-    'saturated-fat_100g': [10, "g/100g"],
-    'cholesterol_100g': [300, "mg/100g"],
-    'carbohydrates_100g': [50, "g/100g"],
-    'sugars_100g': [22.5, "g/100g"],
-    'proteins_100g': [20, "g/100g"],
-    'salt_100g': [3, "g/100g"],
-    'sodium_100g': [1200, "mg/100g"],
-    'vitamin-c_100g': [80, "mg/100g"],
-    'potassium_100g': [2000, "mg/100g"],
-    'calcium_100g': [1200, "mg/100g"],
-    'iron_100g': [15, "mg/100g"],
-    'magnesium_100g': [350, "mg/100g"],
-    'zinc_100g': [10, "mg/100g"]
+    'energy-kcal': [600, "kcal/100g"],
+    'fat': [20, "g/100g"],
+    'saturated-fat': [10, "g/100g"],
+    'cholesterol': [300, "mg/100g"],
+    'carbohydrates': [50, "g/100g"],
+    'sugars': [22.5, "g/100g"],
+    'proteins': [20, "g/100g"],
+    'salt': [3, "g/100g"],
+    'sodium': [1200, "mg/100g"],
+    'vitamin-c': [80, "mg/100g"],
+    'potassium': [2000, "mg/100g"],
+    'calcium': [1200, "mg/100g"],
+    'iron': [15, "mg/100g"],
+    'magnesium': [350, "mg/100g"],
+    'zinc': [10, "mg/100g"],
+    'fibre':[35,'mg/100g']
 }
 
 class NutritionalInputApp:
@@ -56,11 +57,11 @@ class NutritionalInputApp:
 
         for idx, (nutrient, (max_value, unit)) in enumerate(nutritional_values_max.items()):
             # Label du nutriment
-            label = tk.Label(entry_frame, text=f"{nutrient}", font=("Arial", 10), anchor="e")
+            label = tk.Label(entry_frame, text=f"{nutrient}", font=("Arial", 19), anchor="e")
             label.grid(row=idx, column=0, padx=5, sticky="e")
 
             # Champ de saisie du nutriment avec largeur fixe
-            entry = tk.Entry(entry_frame, width=20, font=("Arial", 10), justify="center")
+            entry = tk.Entry(entry_frame, width=20, font=("Arial", 17), justify="center")
             entry.grid(row=idx, column=1, padx=5, sticky="w")
             entry.bind("<KeyRelease>", lambda e, nutrient=nutrient: self.validate_entry(nutrient))
             self.entries[nutrient] = entry
