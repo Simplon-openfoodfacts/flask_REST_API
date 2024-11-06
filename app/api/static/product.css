@@ -1,0 +1,162 @@
+/* static/product.css */
+
+/* Conteneur pour le formulaire */
+.product-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+/* Style des étiquettes et des champs de saisie */
+.product-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.product-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Bouton de calcul */
+.calculate-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f97316;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.calculate-button:hover {
+    background-color: #e36f0f;
+}
+
+/* Affichage du résultat */
+.prediction-result {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+}
+
+.prediction-result h3 {
+    color: #388e3c;
+    font-size: 1.5em;
+    margin: 0;
+}
+/* static/product.css */
+
+.product-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-form label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+.product-form input[type="number"] {
+    width: calc(100% - 30px); /* Ajuste la largeur pour les icônes */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.calculate-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f97316;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calculate-button:hover {
+    background-color: #e36f0f;
+}
+
+.prediction-result {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+}
+
+.prediction-result h3 {
+    color: #388e3c;
+}
+.result-grade img {
+    width: 100px; /* Ajuste la largeur selon tes besoins */
+    max-width: 100%; /* Pour éviter que l'image dépasse la taille du conteneur */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centrer l'image et ajouter un peu d'espace au-dessus et en dessous */
+}
+/* Styles pour le bouton "Réinitialiser" */
+#reset-button {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #d1d1d1;
+    color: #000;
+}

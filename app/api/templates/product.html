@@ -1,0 +1,106 @@
+<!-- templates/product.html -->
+{% extends "base.html" %}
+
+{% block title %}Calcul du Grade Nutritionnel{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="product-form">
+    <h2>Calculateur de Grade Nutritionnel</h2>
+    
+    <form action="{{ url_for('product') }}" method="POST" id="nutrient-form">
+        <label for="energy">Énergie (kcal)</label>
+        <input type="number" id="energy" name="energy" required step="any" oninput="validateInput('energy')">
+        <span class="icon" id="icon-energy"></span>
+        
+        <label for="saturated_fat">Graisses saturées (g)</label>
+        <input type="number" id="saturated_fat" name="saturated_fat" required step="any" oninput="validateInput('saturated_fat')">
+        <span class="icon" id="icon-saturated_fat"></span>
+        
+        <label for="carbohydrates">carbohydrates(g)</label>
+        <input type="number" id="carbohydrates" name="carbohydrates" required step="any" oninput="validateInput('carbohydrates')">
+        <span class="icon" id="icon-carbohydrates"></span>
+        
+        <label for="sugars">Sucres (g)</label>
+        <input type="number" id="sugars" name="sugars" required step="any" oninput="validateInput('sugars')">
+        <span class="icon" id="icon-sugars"></span>
+        
+        <label for="fiber">Fibres (g)</label>
+        <input type="number" id="fiber" name="fiber" step="any" oninput="validateInput('fiber')">
+        <span class="icon" id="icon-fiber"></span>
+        
+        <label for="proteins">Protéines (g)</label>
+        <input type="number" id="proteins" name="proteins" step="any" oninput="validateInput('proteins')">
+        <span class="icon" id="icon-proteins"></span>
+        
+        <label for="salt">Sel (g)</label>
+        <input type="number" id="salt" name="salt" required step="any" oninput="validateInput('salt')">
+        <span class="icon" id="icon-salt"></span>
+        
+        <div id="error-message" class="error-message">
+            {% if errors %}
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        
+        <button type="submit" class="calculate-button" disabled>Calculer le Grade</button>
+        <button type="button" id="reset-button">Réinitialiser</button>
+    </form>
+    
+    <div class="result-grade">
+        {% if grade_image %}
+        <img src="{{ url_for('static', filename=grade_image) }}" alt="Grade Nutritionnel">
+        {% endif %}
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const nutritionalValuesMax =  nutritional_values_max | tojson ;
+    
+    // Fonction pour valider les entrées et afficher les icônes de validation
+    window.validateInput = function(field) {
+        const value = parseFloat(document.getElementById(field).value);
+        const icon = document.getElementById(`icon-${field}`);
+        const max = nutritionalValuesMax[`${field}_100g`];
+        
+        if (!isNaN(value)) {
+            if (max === "N/A") {
+                icon.innerHTML = "";  // Pas d'icône si valeur max non applicable
+            } else if (value <= max && value > 0) {
+                icon.innerHTML = "✔️";  // Icône verte si dans la limite et non zéro
+                icon.style.color = "green";
+            } else if (value > max || value === 0) {
+                icon.innerHTML = "❌";  // Icône rouge si dépasse la limite ou vaut zéro
+                icon.style.color = "red";
+            }
+        } else {
+            icon.innerHTML = ""; // Effacer l'icône si le champ est vide
+        }
+    };
+    
+    // Fonction pour réinitialiser le formulaire
+    document.getElementById("reset-button").addEventListener("click", function() {
+        document.getElementById("nutrient-form").reset();
+        
+        // Réinitialiser les icônes de validation
+        document.querySelectorAll(".icon").forEach(icon => {
+            icon.innerHTML = "";
+        });
+        
+        // Effacer le message d'erreur et le résultat de grade
+        document.getElementById("error-message").innerHTML = "";
+        document.querySelector(".result-grade").innerHTML = "";
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,204 @@
+/* static/search.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Conteneur principal centré */
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.search-page {
+    text-align: center;
+}
+
+/* Barre de recherche */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.header .btn-search {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .btn-search:hover {
+    background-color: #357ae8;
+}
+
+/* Titre de la section de recherche populaire */
+.popular-search {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Conteneur des produits populaires */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les produits */
+}
+
+/* Section individuelle pour chaque produit */
+.product-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px; /* Taille uniforme pour chaque produit */
+}
+
+/* Style de l'image du produit */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style de l'image du Nutri-score */
+.grade-image {
+    width: 80px; /* Taille uniforme pour l'icône du Nutri-score */
+    height: auto;
+    margin-top: 5px;
+}
+
+/* Navigation en bas de la page */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.bottom-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.bottom-nav a:hover {
+    color: orange;
+}
+/* static/search.css */
+
+/* Conteneur principal centré */
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.search-page {
+    text-align: center;
+}
+
+/* Barre de recherche */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.header .btn-search {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header .btn-search:hover {
+    background-color: #357ae8;
+}
+
+/* Titre de la section de recherche populaire */
+.popular-search {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Conteneur des produits populaires */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les produits */
+}
+
+/* Section individuelle pour chaque produit */
+.product-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px; /* Largeur uniforme pour chaque produit */
+}
+
+/* Style de l'image du produit avec dimensions fixes */
+.product-image {
+    width: 100px; /* Largeur uniforme */
+    height: 100px; /* Hauteur uniforme */
+    object-fit: cover; /* Pour remplir l'espace et garder le ratio */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style de l'image du Nutri-score avec dimensions fixes */
+.grade-image {
+    width: 80px; /* Largeur uniforme pour l'icône du Nutri-score */
+    height: 80px; /* Hauteur uniforme */
+    object-fit: contain; /* Pour ajuster sans déformer */
+    margin-top: 5px;
+}
+
+/* Navigation en bas de la page */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.bottom-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.bottom-nav a:hover {
+    color: orange;
+}

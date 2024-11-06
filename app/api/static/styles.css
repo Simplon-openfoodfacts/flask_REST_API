@@ -1,0 +1,168 @@
+/* static/styles.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container pour centrer tout le contenu */
+.container {
+    width: 100%;
+    max-width: 375px; /* Largeur standard pour mobile */
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    min-height: calc(100vh - 80px); /* Ajuste pour tenir compte de la navbar */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+/* Section de bienvenue */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sous-titre et texte de connexion */
+.subtitle, .signin-text {
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signin-text {
+    margin-top: 15px;
+}
+
+.signin-text a, .btn-guest a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.signin-text a:hover, .btn-guest a:hover {
+    text-decoration: underline;
+}
+
+/* Boutons */
+.btn {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-google {
+    background-color: #4285f4;
+    color: white;
+}
+
+.btn-google:hover {
+    background-color: #357ae8;
+}
+
+.btn-email {
+    background-color: transparent;
+    color: #f97316;
+    border: 2px solid #f97316;
+}
+
+.btn-email:hover {
+    background-color: #f97316;
+    color: white;
+}
+
+/* Lien pour accéder en tant qu'invité */
+.btn-guest {
+    color: #333;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Marges conditionnelles pour le container */
+.with-navbar {
+    margin-top: 60px;
+}
+
+.without-navbar {
+    margin-top: 0;
+}
+/* Marges conditionnelles pour le container */
+.with-navbar {
+    margin-top: 60px; /* Applique une marge supérieure lorsque la navbar est présente */
+}
+
+.without-navbar {
+    margin-top: 0; /* Pas de marge supérieure lorsque la navbar est absente */
+}
+

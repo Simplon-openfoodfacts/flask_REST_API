@@ -1,0 +1,25 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="menu">
+    <div class="profile-info">
+        <img src="{{ url_for('static', filename='profils.svg') }}" alt="Profile Image">
+        <p>Jean Pascale</p>
+        <p>jean.Pascale@gmail.com</p>
+    </div>
+    <ul>
+        <li><a href="#">My Orders</a></li>
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Help & FAQs</a></li>
+    </ul>
+    <button class="btn-logout">Log Out</button>
+</div>
+{% endblock %}

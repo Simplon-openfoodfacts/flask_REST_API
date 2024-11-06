@@ -1,0 +1,21 @@
+<!-- templates/login.html -->
+{% extends "base.html" %}
+
+{% block title %}Connexion{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="welcome-section">
+    <h1 class="welcome-text">Welcome to</h1>
+    <img class="logo" src="{{ url_for('static', filename='logo.svg') }}" alt="Logo de La Bonne Bouffe">
+</div>
+<div class="home-page">
+    <p class="subtitle">Calculateur de nutriscore</p>
+    <button class="btn btn-google">Sign in with Google</button>
+    <button class="btn btn-email">Start with email or phone</button>
+    <p class="signin-text">Already have an account? <a href="#">Sign In</a></p>
+    <p class="btn-guest"><a href="{{ url_for('home') }}">Continue as Guest</a></p> <!-- Redirection vers l'accueil -->
+</div>
+{% endblock %}

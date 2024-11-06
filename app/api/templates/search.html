@@ -1,0 +1,44 @@
+<!-- templates/search.html -->
+{% extends "base.html" %}
+
+{% block title %}Recherche{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="search-page">
+    <div class="header">
+        <input type="text" placeholder="Find a product">
+        <button class="btn-search">🔍</button>
+    </div>
+    <h2 class="popular-search">Recherche populaire</h2>
+    
+    <div class="product-container">
+        <div class="product-section">
+            <img src="{{ url_for('static', filename='haricot-vert.jpg') }}" alt="Haricot Vert" class="product-image">
+            <img src="{{ url_for('static', filename='grade_A.png') }}" alt="Grade A" class="grade-image">
+        </div>
+        
+        <div class="product-section">
+            <img src="{{ url_for('static', filename='ravioli.png') }}" alt="Ravioli" class="product-image">
+            <img src="{{ url_for('static', filename='grade_B.png') }}" alt="Grade B" class="grade-image">
+        </div>
+        <div class="product-section">
+            <img src="{{ url_for('static', filename='ravioli.png') }}" alt="Ravioli" class="product-image">
+            <img src="{{ url_for('static', filename='grade_B.png') }}" alt="Grade B" class="grade-image">
+        </div>
+        <div class="product-section">
+            <img src="{{ url_for('static', filename='haricot-vert.jpg') }}" alt="Haricot Vert" class="product-image">
+            <img src="{{ url_for('static', filename='grade_A.png') }}" alt="Grade A" class="grade-image">
+        </div>
+    </div>
+    
+    <nav class="bottom-nav">
+        <a href="#">Home</a>
+        <a href="#">Search</a>
+        <a href="#">Analytics</a>
+        <a href="#">History</a>
+    </nav>
+</div>
+{% endblock %}

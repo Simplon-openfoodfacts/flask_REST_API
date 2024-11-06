@@ -1,0 +1,54 @@
+[
+    {
+        "input": {
+            "energy-kcal_100g": 150.0,
+            "saturated-fat_100g": 2.0,
+            "carbohydrates_100g": 5.0,
+            "sugars_100g": 1.0,
+            "fiber_100g": 15.0,
+            "proteins_100g": 6.0,
+            "salt_100g": 3.0
+        },
+        "prediction": "c",
+        "grade_image": "grade_c.png"
+    },
+    {
+        "input": {
+            "energy-kcal_100g": 24.0,
+            "saturated-fat_100g": 1.0,
+            "carbohydrates_100g": 5.0,
+            "sugars_100g": 4.0,
+            "fiber_100g": 3.0,
+            "proteins_100g": 2.0,
+            "salt_100g": 2.5
+        },
+        "prediction": "c",
+        "grade_image": "grade_c.png"
+    },
+    {
+        "input": {
+            "energy-kcal_100g": 600.0,
+            "saturated-fat_100g": 10.0,
+            "carbohydrates_100g": 25.0,
+            "sugars_100g": 15.0,
+            "fiber_100g": 35.0,
+            "proteins_100g": 2.0,
+            "salt_100g": 1.0
+        },
+        "prediction": "d",
+        "grade_image": "grade_d.png"
+    },
+    {
+        "input": {
+            "energy-kcal_100g": 250.0,
+            "saturated-fat_100g": 2.0,
+            "carbohydrates_100g": 15.0,
+            "sugars_100g": 6.0,
+            "fiber_100g": 25.0,
+            "proteins_100g": 2.0,
+            "salt_100g": 0.5
+        },
+        "prediction": "b",
+        "grade_image": "grade_b.png"
+    }
+]

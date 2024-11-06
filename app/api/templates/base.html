@@ -1,0 +1,30 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}La Bonne Bouffe{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% if show_navbar %}
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}">Accueil</a>
+        <a href="{{ url_for('search') }}">Recherche</a>
+        <a href="{{ url_for('product') }}">Produit</a>
+        <a href="{{ url_for('analytics') }}">Analyse</a>
+    </nav>
+    {% endif %}
+
+    <!-- Bloc de bienvenue réutilisable -->
+    {% block welcome_section %}{% endblock %}
+    
+    <div class="container {% if show_navbar %}with-navbar{% else %}without-navbar{% endif %}">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
